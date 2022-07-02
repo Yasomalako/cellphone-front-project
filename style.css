@@ -1,0 +1,53 @@
+body {
+    font-family: serif;
+    background-color: aqua;
+    background-image: url(Yaso\ movieWorld\ bg.jpg);
+    background-size: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    background-color: blueviolet;
+    margin: auto;
+}
+
+header .logo {
+    background-color: red;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .nav {
+    display: inline-block;
+    background-color: green;
+
+}
+
+.header .nav {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.navigation_bar .active a {
+    display: inline-block;
+    margin-left: 40px;
+}
