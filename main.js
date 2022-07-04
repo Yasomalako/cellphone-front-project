@@ -1,4 +1,4 @@
-let imge = `https://my-json-server.typicode.com/Jeck99/fake-server/devices`
+// let imge = `https://www.world-today-news.com/iphone-13-pro-max-gets-an-always-on-screen-with-a-refresh-rate-of-120hz/`
 let url = `https://my-json-server.typicode.com/Jeck99/fake-server/devices`
 
 async function cardPrinter() {
