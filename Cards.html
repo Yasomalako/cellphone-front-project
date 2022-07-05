@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,15 +12,27 @@
     <title>auer products</title>
 </head>
 <style>
-    body{
+    body {
         background-image: url(pexels-brett-sayles-phon\ projects\ cards\ page.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #form_head{
+        color: aliceblue;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    #form{
+
+    }
+    input{
+        border-radius: 5;
+        justify-content: space-evenly;
+    }
 </style>
+
 <body>
-    <nav class="navbar navbar-dark bg-dark navbar-expand-lg  p-2 text-warning bg-opacity-75">
+    <nav class="navbar navbar-dark sticky-top bg-dark navbar-expand-lg  p-2 text-warning bg-opacity-75">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">YasoPhons</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -52,8 +65,20 @@
     <hr>
     <!-- main-cards -->
     <div id="rows" class="row row-cols-1 row-cols-md-3 g-4 opacity-75 shadow-lg">
-        
+
     </div>
+    <h3 id="form_head">If u serch for spcific cellphon and u didnt find it hear?<br>
+         let us know and we will tack care of u</h3>
+    <div id="form">
+        <p id="loded"></p>
+        <input type="text" placeholder=" Brand?" id="input_brand" class="form_input" > <br>
+        <input type="text" placeholder=" Color?" id="input_color" class="form_input"><br>
+        <input type="text" placeholder=" Ram?" id="input_ram" class="form_input" ><br>
+        <input type="text" placeholder="Made in?" id="input_madein" class="form_input"><br>
+        <input type="text" placeholder="Cost?" id="input_cost" class="form_input"><br>
+        <button onclick="addObjBtn()" id="btn_form">Submit</button>
+    </div>
+    
     <footer class="bg-dark text-white pt-5 pb-4">
         <div class="container text-center text-md-left">
             <div class="row text-center text-md-left">
@@ -141,6 +166,7 @@
         </div>
     </footer>
     <script src="main.js"></script>
-    
+
 </body>
+
 </html>

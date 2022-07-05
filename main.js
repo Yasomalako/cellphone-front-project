@@ -3,7 +3,7 @@ let url = `https://my-json-server.typicode.com/Jeck99/fake-server/devices`
 
 async function cardPrinter() {
     try {
-        await fetch(url).then(res => json())
+        await fetch(url).then(res => res.json())
     }
     catch (err) {
         console.log(err);
@@ -54,3 +54,47 @@ async function getDevice() {
 
 }
 getDevice()
+
+
+async function addObjBtn() {
+    let inputs = document.getElementsByClassName("form_input")
+    const devices = {
+        phone: {
+            Brand: input_brand.value,
+            Color: input_color.value,
+            Ram: input_ram.value,
+            createdAt: input_madein.value,
+            Price: input_cost.value,
+
+        }
+    }
+    try {
+        loded.innerHTML = "<img style=  'width=20vw' src='loading-gif-icon-0 yaso project.jpg'>"
+        await fetch(url, {
+            method: "POST",
+            body: JSON.stringify(devices),
+            headers: { 'Content-Type': 'application/json' },
+        }).then(result => console.log(result))
+    }
+    catch (error) { console.log("some thing went wrong") }
+    finally {
+        input_brand.value= ''
+        input_color.value= ''
+        input_ram.value= ''
+        input_madein.value= ''
+        input_cost.value= '' 
+        loded.innerHTML = ""   
+    }
+}
+
+async function deletObject(id) {
+    try {
+        let response = await fetch(url+id, {
+            method: 'DELETE',
+            body: res.json()
+        })
+        if(response.status<=299)
+            document.getElementById(id).remove()
+    }
+    catch(err){}
+}
