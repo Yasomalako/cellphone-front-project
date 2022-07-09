@@ -9,13 +9,17 @@
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
     <title>PhoneApi</title>
 </head>
 
 <body>
     <nav class="navbar navbar-dark bg-dark sticky-top navbar-expand-lg  p-2 text-warning bg-opacity-75">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">YasoPhons </a>
+            <a class="navbar-brand" href="../index.html">YasoPhons </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
                 aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -23,16 +27,22 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Cards.html">our Products</a>
+                        <a class="nav-link active" aria-current="page" href="pviews/Cards.html">our Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">about</a>
+                        <a class="nav-link" href="pviews/about.html">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link"  href="Contact.html">Contact Us</a>
+                        <a class="nav-link" href="pviews/Contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="table.html">Users Credit </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Delivery.html">Delivery</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -47,30 +57,37 @@
     <!-- main-carusela -->
 
 
-    <div class="container">
-        <div id="carouselExampleControls" class="carousel slide opacity-75" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="1_BBvNeobMkTn6FeDH2oZ0Yg carusel cellphon project.gif" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="iphon pinck project.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner opacity-75 ">
+            <div class="carousel-item active">
+                <img src="/imgs/1_BBvNeobMkTn6FeDH2oZ0Yg carusel cellphon project.gif" class="d-block mx-5   w-100"
+                    alt="...">
+            </div>
+            <div class="carousel-item active">
+                <img src="/imgs/iphone.0 carusel photo.gif" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item active">
+                <img src="..." class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
     <hr>
 

@@ -1,5 +1,6 @@
 // let imge = `https://www.world-today-news.com/iphone-13-pro-max-gets-an-always-on-screen-with-a-refresh-rate-of-120hz/`
 let url = `https://my-json-server.typicode.com/Jeck99/fake-server/devices`
+let users = `https://my-json-server.typicode.com/Jeck99/fake-server/users`
 
 async function cardPrinter() {
     try {
@@ -47,6 +48,7 @@ async function getDevice() {
             color:  ${element.color} ;<br>
             ram:  ${element.ram};<br>
         </p>
+        <button id="del_btn" onclick="deletObject(id)">dellete</button>
     </div>
     </div>`
     });
@@ -57,19 +59,18 @@ getDevice()
 
 
 async function addObjBtn() {
-    let inputs = document.getElementsByClassName("form_input")
     const devices = {
         phone: {
-            Brand: input_brand.value,
-            Color: input_color.value,
-            Ram: input_ram.value,
-            createdAt: input_madein.value,
-            Price: input_cost.value,
+            Brand: brand_input.value,
+            Color: color_input.value,
+            Ram: ram_input.value,
+            createdAt: madeIn_input.value,
+            Price: cost_input.value,
 
         }
     }
     try {
-        loded.innerHTML = "<img style=  'width=20vw' src='loading-gif-icon-0 yaso project.jpg'>"
+        loded.innerHTML = "<img style=  'width=20vw' src='/imgs/loading-gif-icon-0 yaso project.jpg'>"
         await fetch(url, {
             method: "POST",
             body: JSON.stringify(devices),
@@ -78,23 +79,56 @@ async function addObjBtn() {
     }
     catch (error) { console.log("some thing went wrong") }
     finally {
-        input_brand.value= ''
-        input_color.value= ''
-        input_ram.value= ''
-        input_madein.value= ''
-        input_cost.value= '' 
-        loded.innerHTML = ""   
+        input_brand.value = ''
+        input_color.value = ''
+        input_ram.value = ''
+        input_madein.value = ''
+        input_cost.value = ''
+        loded.innerHTML = ""
     }
 }
 
 async function deletObject(id) {
     try {
-        let response = await fetch(url+id, {
+        let response = await fetch(url + id, {
             method: 'DELETE',
-            body: res.json()
+
         })
-        if(response.status<=299)
+        if (response.status <= 299)
             document.getElementById(id).remove()
     }
-    catch(err){}
+    catch (err) { }
 }
+
+async function getUsersApi() {
+    try {
+        await fetch(users)
+            .then(resulte => resulte.json())
+    }
+    catch (err) {
+        alert("sory we got error")
+    }
+    finally { }
+}
+
+const tablebody = document.getElementById("users_data");
+function usersTable() {
+    getUsersApi()
+        .then(result => {
+            result.forEach(item => {
+                tablebody.innerHTML +=
+                    `
+                <tr>
+                <td>${item.age}</td>
+                <td>${item.name.first}</td>
+                <td>${item.name.last}</td>
+                <td>${item.email}</td>
+                <td>${item.index}</td>
+                <td>${item.phone}</td>
+                <td>${item.picture}</td>
+                </tr>
+                `
+            });
+        })
+}
+usersTable();
